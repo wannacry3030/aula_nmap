@@ -2,7 +2,7 @@ import socket
 import sys
 
 host = "google.com"
-ports = range(100)
+ports = [21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135]
 
 for port in ports:
   client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

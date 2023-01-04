@@ -3,12 +3,15 @@ import sys
 
 
 def scan(host, ports, timeout=0.5):
-    for port in ports:
-      client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-      client.settimeout(timeout)
-      code = client.connect_ex((host, int(port)))
-      if code == 0:
-          print("[+] {} open".format(port))
+    try:
+        for port in ports:
+          client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+          client.settimeout(timeout)
+          code = client.connect_ex((host, int(port)))
+          if code == 0:
+              print("[+] {} open".format(port))
+    except:
+        print("Error, something is wrong.")
 
 if __name__ == "__main__":
     if len(sys.argv) >= 2:

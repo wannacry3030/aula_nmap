@@ -1,0 +1,13 @@
+# Nmap 7.93 scan initiated Tue Jan  3 22:13:17 2023 as: nmap -sS -p 1-5000 -oN output_grupohorizonte grupohorizonte.com.br
+Nmap scan report for grupohorizonte.com.br (187.33.79.54)
+Host is up (0.082s latency).
+rDNS record for 187.33.79.54: mail.grupohorizonte.com.br
+Not shown: 4995 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  closed https
+491/tcp  open   go-login
+3306/tcp open   mysql
+
+# Nmap done at Tue Jan  3 22:13:39 2023 -- 1 IP address (1 host up) scanned in 21.87 seconds
